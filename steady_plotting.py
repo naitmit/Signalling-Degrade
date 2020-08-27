@@ -5,12 +5,12 @@ Created on Tue Jun  2 18:21:01 2020
 
 @author: tim
 
-Systematic plotting routine for non-steady state. 
+Systematic plotting routine for non-steady state. Only plots in (x,y,z).
 """
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.ticker import MaxNLocator
-from laguerre_testing import Fisher, aFisher, rel_e #Fisher function
+from numerics import Fisher, aFisher, rel_e #Fisher function
 from collections import OrderedDict
 import matplotlib.colors as colors
 

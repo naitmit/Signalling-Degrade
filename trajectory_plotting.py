@@ -7,7 +7,7 @@ import numpy as np
 import os
 # import scipy.special as sp
 
-from laguerre_testing import P_mp, P_ns #exact prob distr
+from numerics import P_mp, P_ns #exact prob distr
 
 from settings import FOLDER_OUTPUT
 variables = np.load('gill_var.npz', allow_pickle=True) #load the variables
@@ -236,4 +236,3 @@ def plot_estimation(moment_times, estimate_data, model, params, theory_curves, e
     # m = np.arange(0,50,1)
     # plt.plot(m,P(m))
     # plt.ylim(0,0.02)
-    
