@@ -23,3 +23,5 @@ analytic `.npy` file and also saves the approx in the same file format.
 3. `dynamical_plotting.py` is used for analysis by loading the already generated arrays. Make sure to check that the loaded files are right.
 
 In general, I think there a some redundancies in the files and functions within files, which could be made more efficient with more general functions.
+
+Mathematica note books are also provided.
