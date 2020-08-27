@@ -12,16 +12,16 @@ do
       mkdir ./plot_progress${i}
       echo "New directory made: plot_progress"${i}
 
-      cp steady_deg_accuracy_plots_run* laguerre_testing* params* formulae* settings* variables* ./plot_progress${i}
+      cp steady_plotting* laguerre_testing* params* formulae* settings* variables* ./plot_progress${i}
       echo "Staged Python files in plot_progress"${i}
 
       cd ./plot_progress${i}
       echo "Working directory is now plot_progress"${i}
 
       echo "Running plotting script"
-      time python3.7 steady_deg_accuracy_plots_run.py
+      time python3.7 steady_plotting.py
 
-      rm steady_deg_accuracy_plots_run* laguerre_testing* params* formulae* settings*
+      rm steady_plotting* laguerre_testing* params* formulae* settings*
 
       day=$(date +'%m'-'%d') #date in mm-dd format
       now=$(date +'%R') #time in 24hr clock
