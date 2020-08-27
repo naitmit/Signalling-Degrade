@@ -15,6 +15,11 @@ These are mainly used to save the arrays used for plotting. They also create plo
 3. `plot_newvar.py` does the same but in the variables used in the pleiotropy paper.
 4. `run_plot.sh` is a bash script to run these plots. It creates a staging directory so that I can run many plots simultaneously, and saves the outputs in a time-stamped directory. `run_new_plot.sh` is the same, for plotting in the other variables.
 5. `dynamical_plotting_server.py` is the script for non-steady plots based on analytic expression, parallelized due to slowness of serial computations. The array is saved as a `.npy` file. **Note:**when importing onto a server, make sure to bring the auxiliary files the scripts import: `settings`, `params`, `formulae`.
-6. `dynamical_plotting2.py` is for non-steady normal approx plots which are less computationally intensive and can be run locally. It imports the
+
+## Analysis
+1. After the steady state arrays are saved, `./plotting/plot_analysis.py` is used for analysis. Same with `plot_newvar_analysis.py`.
+2. `dynamical_plotting2.py` is for non-steady normal approx plots which are less computationally intensive and can be run locally. It imports the
 analytic `.npy` file and also saves the approx in the same file format.
-7. `dynamical_plotting.py` is used for analysis by loading the already generated arrays. Make sure to check that the loaded files are right.
+3. `dynamical_plotting.py` is used for analysis by loading the already generated arrays. Make sure to check that the loaded files are right.
+
+In general, I think there a some redundancies in the files and functions within files, which could be made more efficient with more general functions.
